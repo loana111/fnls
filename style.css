@@ -1,0 +1,288 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f9ff;
+    color: #4b5dd5;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  #logo {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    font-family: 'Segoe UI Black', Arial Black, Arial, sans-serif;
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: #2f66b8;
+    user-select: none;
+    z-index: 1100;
+    cursor: default;
+    line-height: 1;
+  }
+  #logo .j {
+    position: relative;
+    display: inline-block;
+    color: #0d6efd;
+  }
+  #logo .j::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0.45em;
+    width: 0.35em;
+    height: 100%;
+    background: #0d6efd;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    transform: skew(-20deg);
+    border-radius: 3px;
+    z-index: -1;
+  }
+  #logo .a {
+    margin-left: -0.3em;
+    color: #0d6efd;
+  }
+  header {
+    max-width: 1140px;
+    margin: 90px auto 40px; 
+    background: white;
+    border-radius: 16px;
+    padding: 4rem 2rem 3rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    box-shadow: 0 6px 20px rgb(13 110 253 / 0.1);
+    flex-wrap: wrap;
+  }
+
+  .profile-circle {
+    flex: 0 0 300px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a9c3ff 0%, #dbe9ff 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    box-shadow: 0 10px 30px rgb(13 110 253 / 0.3);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+    cursor: default;
+  }
+  .profile-circle:hover {
+    box-shadow: 0 15px 40px rgba(50, 108, 195, 0.5);
+  }
+  .profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: inset 0 0 18px rgb(0 0 0 / 0.15);
+    user-select: none;
+    pointer-events: none;
+    background: rgb(155, 24, 24);
+  }
+
+  .intro-text {
+    flex: 1 1 400px;
+    min-width: 280px;
+    text-align: left;
+  }
+  .intro-text h1 {
+    font-size: 3.4rem;
+    margin-bottom: 0.4rem;
+    font-weight: 900;
+    color: #0d6efd;
+    letter-spacing: -0.05em;
+  }
+  .intro-text p.subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+    font-weight: 600;
+    color: #444;
+  }
+
+  nav.main-nav {
+    display: flex;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  nav.main-nav a {
+    padding: 0.6rem 1.3rem;
+    border-radius: 45px;
+    border: 2px solid #0d6efd;
+    color: #0d6efd;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+  }
+  nav.main-nav a:hover,
+  nav.main-nav a:focus {
+    background-color: #0d6efd;
+    color: white;
+    outline: none;
+  }
+
+  #about {
+    background: rgb(235, 224, 224);
+    max-width: 800px;
+    margin: 3rem auto 6rem;
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(129, 77, 77, 0.1);
+    text-align: center;
+  }
+  #about h2 {
+    font-weight: 900;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #0d6efd;
+  }
+  #about p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.7;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #portfolio {
+    background: #f3f6fc;
+    padding: 4rem 1rem 6rem;
+  }
+  #portfolio > .container {
+    max-width: 1140px;
+  }
+  #portfolio h2 {
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: #0d6efd;
+    text-align: center;
+    margin-bottom: 2.6rem;
+  }
+  .card {
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 0.1);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 40px rgb(0 0 0 / 0.18);
+  }
+  .card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 1.3rem 1.5rem;
+  }
+  .card-title {
+    font-weight: 700;
+    color: #0d6efd;
+  }
+  .card-text {
+    color: #555;
+  }
+  #contact {
+    background: white;
+    max-width: 640px;
+    margin: 0 auto 4rem;
+    padding: 3.5rem 1rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgb(0 0 0 / 0.08);
+    text-align: center;
+  }
+  #contact h2 {
+    font-weight: 900;
+    font-size: 2.8rem;
+    margin-bottom: 1.1rem;
+    color: #0d6efd;
+  }
+  #contact p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #444;
+  }
+  .social-btn {
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+    margin: 0 1rem;
+    border-radius: 50%;
+    border: 2.5px solid #0d6efd;
+    color: #0d6efd;
+    font-size: 2.2rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 8px #0d6efd33;
+    cursor: pointer;
+  }
+  .social-btn:hover,
+  .social-btn:focus {
+    background-color: #0d6efd;
+    color: white;
+    box-shadow: 0 0 14px #0a58cacc;
+    text-decoration: none;
+    outline: none;
+  }
+  @media (max-width: 900px) {
+    header {
+      flex-direction: column;
+      padding-top: 3rem;
+    }
+    .intro-text {
+      max-width: 100%;
+      text-align: center;
+    }
+    nav.main-nav {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  }
+  @media (max-width: 576px) {
+    #logo {
+      font-size: 2rem;
+      top: 18px;
+      left: 18px;
+    }
+    header {
+      padding: 3rem 1rem 2rem;
+      margin-top: 60px;
+    }
+    .profile-circle {
+      width: 230px;
+      height: 230px;
+      margin: 0 auto 1.6rem;
+    }
+    .intro-text h1 {
+      font-size: 2.3rem;
+    }
+    .intro-text p.subtitle {
+      font-size: 1.1rem;
+    }
+    #about {
+      margin: 2rem 1rem 4rem;
+    }
+    #portfolio {
+      padding: 3rem 1rem 5rem;
+    }
+    #contact {
+      margin: 0 1rem 3rem;
+      padding: 2.5rem 1rem;
+    }
+    .social-btn {
+      width: 52px;
+      height: 52px;
+      font-size: 1.9rem;
+      line-height: 52px;
+      margin: 0 0.7rem;
+    }
+  }
